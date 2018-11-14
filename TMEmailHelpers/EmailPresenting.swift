@@ -13,19 +13,33 @@ public protocol EmailPresenting: AnyObject {
     
 }
 
-extension EmailPresenting where Self: UIViewController {
+extension EmailPresenting where Self: UIViewController & MFMailComposeViewControllerDelegate {
     
-    public func presentEmail(_ controller: MFMailComposeViewController) {
+    public func presentEmail(_ email: Email) {
         if MFMailComposeViewController.canSendMail() {
-            present(controller, animated: true, completion: nil)
+            let mail = MFMailComposeViewController()
+            
+            mail.setSubject(email.subject)
+            mail.setToRecipients(email.validTo)
+            mail.setCcRecipients(email.validCc)
+            mail.setBccRecipients(email.validBcc)
+            
+            mail.setMessageBody(email.body, isHTML: email.isHTML)
+            
+            email.attachments.forEach { attachment in
+                mail.addAttachmentData(attachment.data, mimeType: attachment.fileType.mimeType, fileName: "\(attachment.name).\(attachment.fileType.fileExtension)")
+            }
+            
+            mail.mailComposeDelegate = self
+            
+            present(mail, animated: true, completion: nil)
         } else {
             let message = """
-            In order to for this application to create emails on your behalf, you must have at least one account setup for the Mail.app system application.
+            In order to for this application to create emails, you must have at least one account setup in the Mail.app system application.
             """
-            let ac = UIAlertController(title: "Unable to Send Email", message: message, preferredStyle: .alert)
+            let ac = UIAlertController(title: "Unable to Create Email", message: message, preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(ac, animated: true, completion: nil)
         }
     }
 }
-

@@ -31,42 +31,31 @@ public struct Email {
     }
     
     public mutating func addToEmail(_ address: EmailAddress) {
-        if let valid = validatedEmail(address) {
-            to.insert(valid)
-        }
+        to.insert(address)
     }
     
     public mutating func addCcEmail(_ address: EmailAddress) {
-        if let valid = validatedEmail(address) {
-            cc.insert(valid)
-        }
+        cc.insert(address)
     }
     
     public mutating func addBccEmail(_ address: EmailAddress) {
-        if let valid = validatedEmail(address) {
-            bcc.insert(valid)
-        }
+        bcc.insert(address)
     }
     
     public mutating func addAttachment(_ attachment: EmailAttachment) {
         attachments.insert(attachment)
     }
     
-    public func createMailController() -> MFMailComposeViewController {
-        let mail = MFMailComposeViewController()
-        
-        mail.setSubject(subject)
-        mail.setToRecipients(to.compactMap { validatedEmail($0) })
-        mail.setCcRecipients(cc.compactMap { validatedEmail($0) })
-        mail.setBccRecipients(bcc.compactMap { validatedEmail($0) })
-        
-        mail.setMessageBody(body, isHTML: isHTML)
-        
-        attachments.forEach { attachment in
-            mail.addAttachmentData(attachment.data, mimeType: attachment.mimeType.mimeType, fileName: attachment.name)
-        }
-        
-        return mail
+    var validTo: [EmailAddress] {
+        return to.compactMap { validatedEmail($0) }
+    }
+    
+    var validCc: [EmailAddress] {
+        return cc.compactMap { validatedEmail($0) }
+    }
+    
+    var validBcc: [EmailAddress] {
+        return bcc.compactMap { validatedEmail($0) }
     }
     
     func validatedEmail(_ email: EmailAddress) -> EmailAddress? {

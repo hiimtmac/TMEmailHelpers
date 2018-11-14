@@ -1,5 +1,5 @@
 PODS:
-  - SwiftyMimes (0.0.2)
+  - SwiftyMimes (0.0.3)
 
 DEPENDENCIES:
   - SwiftyMimes (from `https://github.com/hiimtmac/SwiftyMimes.git`)
@@ -10,11 +10,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SwiftyMimes:
-    :commit: 0fcdc6786c2afec20912650b6efe61ea4d9e6e5c
+    :commit: 8f6779733f0b3f5df03d7567623b3dbb5be6c66f
     :git: https://github.com/hiimtmac/SwiftyMimes.git
 
 SPEC CHECKSUMS:
-  SwiftyMimes: ca185f881211946b0fa40c321cb15645f8728e3c
+  SwiftyMimes: 73f91a3d22167bf9bb858c6705ad40c4837937c3
 
 PODFILE CHECKSUM: 0f638546767febc5bf779d19f70c9f040b807472
 

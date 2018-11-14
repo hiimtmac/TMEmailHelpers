@@ -11,12 +11,12 @@ import SwiftyMimes
 
 public struct EmailAttachment {
     let name: String
-    let mimeType: MimeType
+    let fileType: FileType
     let data: Data
     
-    public init(name: String, mimeType: MimeType, data: Data) {
+    public init(name: String, fileType: FileType, data: Data) {
         self.name = name
-        self.mimeType = mimeType
+        self.fileType = fileType
         self.data = data
     }
 }
@@ -25,13 +25,13 @@ extension EmailAttachment: Equatable, Hashable {
     public static func == (lhs: EmailAttachment, rhs: EmailAttachment) -> Bool {
         return
             lhs.name == rhs.name &&
-            lhs.mimeType.mimeType == rhs.mimeType.mimeType &&
+            lhs.fileType.mimeType == rhs.fileType.mimeType &&
             lhs.data == rhs.data
     }
     
     public func hash(into hasher: inout Hasher) {
         hasher.combine(name)
-        hasher.combine(mimeType.mimeType)
+        hasher.combine(fileType.mimeType)
         hasher.combine(data)
     }
 }

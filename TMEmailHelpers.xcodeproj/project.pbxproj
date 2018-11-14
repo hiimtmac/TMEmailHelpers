@@ -508,7 +508,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B2C16F272F0661FB1337DC4 /* Pods-TMEmailHelpersTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 467S4RZC6U;
 				INFOPLIST_FILE = TMEmailHelpersTests/Info.plist;
@@ -528,7 +528,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F383EACBD7EDB09A028C805 /* Pods-TMEmailHelpersTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 467S4RZC6U;
 				INFOPLIST_FILE = TMEmailHelpersTests/Info.plist;
