@@ -1,0 +1,21 @@
+PODS:
+  - SwiftyMimes (0.0.2)
+
+DEPENDENCIES:
+  - SwiftyMimes (from `https://github.com/hiimtmac/SwiftyMimes.git`)
+
+EXTERNAL SOURCES:
+  SwiftyMimes:
+    :git: https://github.com/hiimtmac/SwiftyMimes.git
+
+CHECKOUT OPTIONS:
+  SwiftyMimes:
+    :commit: 0fcdc6786c2afec20912650b6efe61ea4d9e6e5c
+    :git: https://github.com/hiimtmac/SwiftyMimes.git
+
+SPEC CHECKSUMS:
+  SwiftyMimes: ca185f881211946b0fa40c321cb15645f8728e3c
+
+PODFILE CHECKSUM: 0f638546767febc5bf779d19f70c9f040b807472
+
+COCOAPODS: 1.5.3

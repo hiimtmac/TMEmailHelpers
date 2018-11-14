@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		047C07CE33D126DB5360D723 /* Pods_TMEmailHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEB248ABBB3AAB1A1056950 /* Pods_TMEmailHelpers.framework */; };
+		8F37C1048F0C5F7F8D66803E /* Pods_TMEmailHelpersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44DD9EFCDEED222F63131BB /* Pods_TMEmailHelpersTests.framework */; };
+		D7218655219C74B700FEB5E0 /* TMEmailHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D721864B219C74B700FEB5E0 /* TMEmailHelpers.framework */; };
+		D721865C219C74B700FEB5E0 /* TMEmailHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = D721864E219C74B700FEB5E0 /* TMEmailHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7218669219C75A500FEB5E0 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7218668219C75A500FEB5E0 /* Attachment.swift */; };
+		D721866B219C766800FEB5E0 /* EmailPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721866A219C766800FEB5E0 /* EmailPresenting.swift */; };
+		D721866D219C76BF00FEB5E0 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721866C219C76BF00FEB5E0 /* Email.swift */; };
+		D721866F219C7D0E00FEB5E0 /* EmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721866E219C7D0E00FEB5E0 /* EmailTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7218656219C74B700FEB5E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7218642219C74B700FEB5E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D721864A219C74B700FEB5E0;
+			remoteInfo = TMEmailHelpers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B2C16F272F0661FB1337DC4 /* Pods-TMEmailHelpersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMEmailHelpersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TMEmailHelpersTests/Pods-TMEmailHelpersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F383EACBD7EDB09A028C805 /* Pods-TMEmailHelpersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMEmailHelpersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TMEmailHelpersTests/Pods-TMEmailHelpersTests.release.xcconfig"; sourceTree = "<group>"; };
+		4FEB248ABBB3AAB1A1056950 /* Pods_TMEmailHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMEmailHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		684A929F5F1A6F46F5AB353B /* Pods-TMEmailHelpers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMEmailHelpers.release.xcconfig"; path = "Pods/Target Support Files/Pods-TMEmailHelpers/Pods-TMEmailHelpers.release.xcconfig"; sourceTree = "<group>"; };
+		68DCE399374865567C67ABCB /* Pods-TMEmailHelpers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMEmailHelpers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TMEmailHelpers/Pods-TMEmailHelpers.debug.xcconfig"; sourceTree = "<group>"; };
+		D721864B219C74B700FEB5E0 /* TMEmailHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMEmailHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D721864E219C74B700FEB5E0 /* TMEmailHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMEmailHelpers.h; sourceTree = "<group>"; };
+		D721864F219C74B700FEB5E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7218654219C74B700FEB5E0 /* TMEmailHelpersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMEmailHelpersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D721865B219C74B700FEB5E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7218665219C754B00FEB5E0 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D7218666219C754B00FEB5E0 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		D7218667219C754B00FEB5E0 /* TMEmailHelpers.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = TMEmailHelpers.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D7218668219C75A500FEB5E0 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		D721866A219C766800FEB5E0 /* EmailPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPresenting.swift; sourceTree = "<group>"; };
+		D721866C219C76BF00FEB5E0 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		D721866E219C7D0E00FEB5E0 /* EmailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTests.swift; sourceTree = "<group>"; };
+		F44DD9EFCDEED222F63131BB /* Pods_TMEmailHelpersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMEmailHelpersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7218648219C74B700FEB5E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047C07CE33D126DB5360D723 /* Pods_TMEmailHelpers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7218651219C74B700FEB5E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7218655219C74B700FEB5E0 /* TMEmailHelpers.framework in Frameworks */,
+				8F37C1048F0C5F7F8D66803E /* Pods_TMEmailHelpersTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAC1AF0E6BC84E1B10A316BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FEB248ABBB3AAB1A1056950 /* Pods_TMEmailHelpers.framework */,
+				F44DD9EFCDEED222F63131BB /* Pods_TMEmailHelpersTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE48177CBA2F2A20BBB8EAE8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68DCE399374865567C67ABCB /* Pods-TMEmailHelpers.debug.xcconfig */,
+				684A929F5F1A6F46F5AB353B /* Pods-TMEmailHelpers.release.xcconfig */,
+				3B2C16F272F0661FB1337DC4 /* Pods-TMEmailHelpersTests.debug.xcconfig */,
+				3F383EACBD7EDB09A028C805 /* Pods-TMEmailHelpersTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D7218641219C74B700FEB5E0 = {
+			isa = PBXGroup;
+			children = (
+				D7218665219C754B00FEB5E0 /* LICENSE */,
+				D7218666219C754B00FEB5E0 /* readme.md */,
+				D7218667219C754B00FEB5E0 /* TMEmailHelpers.podspec */,
+				D721864D219C74B700FEB5E0 /* TMEmailHelpers */,
+				D7218658219C74B700FEB5E0 /* TMEmailHelpersTests */,
+				D721864C219C74B700FEB5E0 /* Products */,
+				BE48177CBA2F2A20BBB8EAE8 /* Pods */,
+				AAC1AF0E6BC84E1B10A316BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D721864C219C74B700FEB5E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D721864B219C74B700FEB5E0 /* TMEmailHelpers.framework */,
+				D7218654219C74B700FEB5E0 /* TMEmailHelpersTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D721864D219C74B700FEB5E0 /* TMEmailHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				D721864E219C74B700FEB5E0 /* TMEmailHelpers.h */,
+				D721864F219C74B700FEB5E0 /* Info.plist */,
+				D7218668219C75A500FEB5E0 /* Attachment.swift */,
+				D721866C219C76BF00FEB5E0 /* Email.swift */,
+				D721866A219C766800FEB5E0 /* EmailPresenting.swift */,
+			);
+			path = TMEmailHelpers;
+			sourceTree = "<group>";
+		};
+		D7218658219C74B700FEB5E0 /* TMEmailHelpersTests */ = {
+			isa = PBXGroup;
+			children = (
+				D721866E219C7D0E00FEB5E0 /* EmailTests.swift */,
+				D721865B219C74B700FEB5E0 /* Info.plist */,
+			);
+			path = TMEmailHelpersTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D7218646219C74B700FEB5E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D721865C219C74B700FEB5E0 /* TMEmailHelpers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D721864A219C74B700FEB5E0 /* TMEmailHelpers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D721865F219C74B700FEB5E0 /* Build configuration list for PBXNativeTarget "TMEmailHelpers" */;
+			buildPhases = (
+				4562765451680966124715FB /* [CP] Check Pods Manifest.lock */,
+				D7218646219C74B700FEB5E0 /* Headers */,
+				D7218647219C74B700FEB5E0 /* Sources */,
+				D7218648219C74B700FEB5E0 /* Frameworks */,
+				D7218649219C74B700FEB5E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TMEmailHelpers;
+			productName = TMEmailHelpers;
+			productReference = D721864B219C74B700FEB5E0 /* TMEmailHelpers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D7218653219C74B700FEB5E0 /* TMEmailHelpersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7218662219C74B700FEB5E0 /* Build configuration list for PBXNativeTarget "TMEmailHelpersTests" */;
+			buildPhases = (
+				1C767E088FB46E400E5FD8E0 /* [CP] Check Pods Manifest.lock */,
+				D7218650219C74B700FEB5E0 /* Sources */,
+				D7218651219C74B700FEB5E0 /* Frameworks */,
+				D7218652219C74B700FEB5E0 /* Resources */,
+				BB7489A8C5EF7528F8854E27 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7218657219C74B700FEB5E0 /* PBXTargetDependency */,
+			);
+			name = TMEmailHelpersTests;
+			productName = TMEmailHelpersTests;
+			productReference = D7218654219C74B700FEB5E0 /* TMEmailHelpersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7218642219C74B700FEB5E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = hiimtmac;
+				TargetAttributes = {
+					D721864A219C74B700FEB5E0 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					D7218653219C74B700FEB5E0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = D7218645219C74B700FEB5E0 /* Build configuration list for PBXProject "TMEmailHelpers" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D7218641219C74B700FEB5E0;
+			productRefGroup = D721864C219C74B700FEB5E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D721864A219C74B700FEB5E0 /* TMEmailHelpers */,
+				D7218653219C74B700FEB5E0 /* TMEmailHelpersTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7218649219C74B700FEB5E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7218652219C74B700FEB5E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C767E088FB46E400E5FD8E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TMEmailHelpersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4562765451680966124715FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TMEmailHelpers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB7489A8C5EF7528F8854E27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TMEmailHelpersTests/Pods-TMEmailHelpersTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyMimes/SwiftyMimes.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyMimes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TMEmailHelpersTests/Pods-TMEmailHelpersTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7218647219C74B700FEB5E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D721866B219C766800FEB5E0 /* EmailPresenting.swift in Sources */,
+				D721866D219C76BF00FEB5E0 /* Email.swift in Sources */,
+				D7218669219C75A500FEB5E0 /* Attachment.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7218650219C74B700FEB5E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D721866F219C7D0E00FEB5E0 /* EmailTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7218657219C74B700FEB5E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D721864A219C74B700FEB5E0 /* TMEmailHelpers */;
+			targetProxy = D7218656219C74B700FEB5E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D721865D219C74B700FEB5E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D721865E219C74B700FEB5E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D7218660219C74B700FEB5E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68DCE399374865567C67ABCB /* Pods-TMEmailHelpers.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 467S4RZC6U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TMEmailHelpers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiimtmac.TMEmailHelpers;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7218661219C74B700FEB5E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 684A929F5F1A6F46F5AB353B /* Pods-TMEmailHelpers.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 467S4RZC6U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TMEmailHelpers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiimtmac.TMEmailHelpers;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D7218663219C74B700FEB5E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B2C16F272F0661FB1337DC4 /* Pods-TMEmailHelpersTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 467S4RZC6U;
+				INFOPLIST_FILE = TMEmailHelpersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiimtmac.TMEmailHelpersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7218664219C74B700FEB5E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F383EACBD7EDB09A028C805 /* Pods-TMEmailHelpersTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 467S4RZC6U;
+				INFOPLIST_FILE = TMEmailHelpersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiimtmac.TMEmailHelpersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7218645219C74B700FEB5E0 /* Build configuration list for PBXProject "TMEmailHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D721865D219C74B700FEB5E0 /* Debug */,
+				D721865E219C74B700FEB5E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D721865F219C74B700FEB5E0 /* Build configuration list for PBXNativeTarget "TMEmailHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7218660219C74B700FEB5E0 /* Debug */,
+				D7218661219C74B700FEB5E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7218662219C74B700FEB5E0 /* Build configuration list for PBXNativeTarget "TMEmailHelpersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7218663219C74B700FEB5E0 /* Debug */,
+				D7218664219C74B700FEB5E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7218642219C74B700FEB5E0 /* Project object */;
+}
