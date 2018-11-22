@@ -30,16 +30,22 @@ public struct Email {
         self.attachments = Set(attachments)
     }
     
-    public mutating func addToEmail(_ address: EmailAddress) {
-        to.insert(address)
+    public mutating func addToEmail(_ address: EmailAddress?) {
+        if let address = address {
+            to.insert(address)
+        }
     }
     
-    public mutating func addCcEmail(_ address: EmailAddress) {
-        cc.insert(address)
+    public mutating func addCcEmail(_ address: EmailAddress?) {
+        if let address = address {
+            cc.insert(address)
+        }
     }
     
-    public mutating func addBccEmail(_ address: EmailAddress) {
-        bcc.insert(address)
+    public mutating func addBccEmail(_ address: EmailAddress?) {
+        if let address = address {
+            bcc.insert(address)
+        }
     }
     
     public mutating func addAttachment(_ attachment: EmailAttachment) {

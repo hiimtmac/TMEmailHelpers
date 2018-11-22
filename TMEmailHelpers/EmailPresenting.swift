@@ -10,14 +10,19 @@ import Foundation
 import MessageUI
 
 public protocol EmailPresenting: AnyObject {
-    
+    func style(_ controller: MFMailComposeViewController)
 }
 
 extension EmailPresenting where Self: UIViewController & MFMailComposeViewControllerDelegate {
+    public func style(_ controller: MFMailComposeViewController) {
+        
+    }
     
     public func presentEmail(_ email: Email) {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
+            
+            style(mail)
             
             mail.setSubject(email.subject)
             mail.setToRecipients(email.validTo)

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name                    = "TMEmailHelpers"
-    s.version                 = "0.0.2"
+    s.version                 = "0.0.3"
     s.summary                 = "Email creation helpers"
 
     s.homepage                = "http://github.com/hiimtmac/TMEmailHelpers"
@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
     s.source                  = { :git => "https://github.com/hiimtmac/TMEmailHelpers.git", :tag => s.version }
     s.source_files            = "TMEmailHelpers/**/*.swift"
     s.requires_arc            = true
+    s.framework               = 'MessageUI'
+
     s.dependency 'SwiftyMimes'
 
 end
