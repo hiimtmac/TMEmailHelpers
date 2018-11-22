@@ -13,11 +13,13 @@ public protocol EmailPresenting: AnyObject {
     func style(_ controller: MFMailComposeViewController)
 }
 
-extension EmailPresenting where Self: UIViewController & MFMailComposeViewControllerDelegate {
+extension EmailPresenting {
     public func style(_ controller: MFMailComposeViewController) {
         
     }
-    
+}
+
+extension EmailPresenting where Self: UIViewController & MFMailComposeViewControllerDelegate {
     public func presentEmail(_ email: Email) {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
