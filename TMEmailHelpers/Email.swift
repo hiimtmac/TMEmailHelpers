@@ -65,11 +65,12 @@ public struct Email {
     }
     
     func validatedEmail(_ email: EmailAddress) -> EmailAddress? {
+        let trimmedEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
         
-        if emailPredicate.evaluate(with: email) {
-            return email
+        if emailPredicate.evaluate(with: trimmedEmail) {
+            return trimmedEmail
         } else {
             return nil
         }

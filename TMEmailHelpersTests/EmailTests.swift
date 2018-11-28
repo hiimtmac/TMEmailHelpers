@@ -63,4 +63,12 @@ class EmailTests: XCTestCase {
         email.addAttachment(a5)
         XCTAssertEqual(email.attachments.count, 4)
     }
+    
+    func testWhitespaceEmails() {
+        var email = Email(subject: "attachments", body: "chaff", to: [" t@voltagepower.ca", "taylor@hiimtmac.com", "t@hiitmamc.com ", " cpaces@hiimtmac.com "])
+        XCTAssertEqual(email.validTo.count, 4)
+
+        email.addToEmail("   this@hiitmamc.com    ")
+        XCTAssertEqual(email.validTo.count, 5)
+    }
 }
