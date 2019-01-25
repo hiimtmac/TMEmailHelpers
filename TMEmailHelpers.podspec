@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name                    = "TMEmailHelpers"
-    s.version                 = "0.0.4"
+    s.version                 = "0.1.0"
     s.summary                 = "Email creation helpers"
 
     s.homepage                = "http://github.com/hiimtmac/TMEmailHelpers"
@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
     s.framework               = 'MessageUI'
 
     s.dependency 'SwiftyMimes'
-
+    s.dependency 'Requester'
 end

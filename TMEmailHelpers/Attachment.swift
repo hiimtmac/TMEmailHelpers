@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyMimes
 
-public struct EmailAttachment {
+public struct EmailAttachment: Equatable, Hashable {
     let name: String
     let fileType: FileType
     let data: Data
@@ -18,20 +18,5 @@ public struct EmailAttachment {
         self.name = name
         self.fileType = fileType
         self.data = data
-    }
-}
-
-extension EmailAttachment: Equatable, Hashable {
-    public static func == (lhs: EmailAttachment, rhs: EmailAttachment) -> Bool {
-        return
-            lhs.name == rhs.name &&
-            lhs.fileType.mimeType == rhs.fileType.mimeType &&
-            lhs.data == rhs.data
-    }
-    
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(name)
-        hasher.combine(fileType.mimeType)
-        hasher.combine(data)
     }
 }

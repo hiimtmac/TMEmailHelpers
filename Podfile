@@ -1,14 +1,18 @@
 platform :ios, '11.0'
 
+source 'https://github.com/hiimtmac/specs.git'
+
 target 'TMEmailHelpers' do
   use_frameworks!
 
-  pod 'SwiftyMimes', :git => 'https://github.com/hiimtmac/SwiftyMimes.git'
+  pod 'SwiftyMimes'
+  pod 'Requester'
 
   target 'TMEmailHelpersTests' do
     inherit! :search_paths
 
-    pod 'SwiftyMimes', :git => 'https://github.com/hiimtmac/SwiftyMimes.git'
+    pod 'SwiftyMimes'
+    pod 'Requester'
   end
 
 end

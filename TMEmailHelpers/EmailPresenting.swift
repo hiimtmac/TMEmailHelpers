@@ -27,15 +27,11 @@ extension EmailPresenting where Self: UIViewController & MFMailComposeViewContro
             style(mail)
             
             mail.setSubject(email.subject)
-            mail.setToRecipients(email.validTo)
-            mail.setCcRecipients(email.validCc)
-            mail.setBccRecipients(email.validBcc)
-            
+            mail.setToContacts(email.to)
+            mail.setCcContacts(email.cc)
+            mail.setBccContacts(email.bcc)
             mail.setMessageBody(email.body, isHTML: email.isHTML)
-            
-            email.attachments.forEach { attachment in
-                mail.addAttachmentData(attachment.data, mimeType: attachment.fileType.mimeType, fileName: "\(attachment.name).\(attachment.fileType.fileExtension)")
-            }
+            mail.setAttachments(email.attachments)
             
             mail.mailComposeDelegate = self
             

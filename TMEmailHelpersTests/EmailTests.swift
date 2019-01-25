@@ -12,41 +12,41 @@ import XCTest
 class EmailTests: XCTestCase {
 
     func testTo() {
-        var email = Email(subject: "Hello", body: "This is an email", to: ["test@hiimtmac.com"])
+        var email = Email(subject: "Hello", body: "This is an email", toAddresses: ["test@hiimtmac.com"])
         email.addToEmail("tmcintyre@hiimtmac.ca")
-        XCTAssertEqual(email.validTo.count, 2)
+        XCTAssertEqual(email.to.count, 2)
         email.addToEmail("tmcintyre@v")
-        XCTAssertEqual(email.validTo.count, 2)
+        XCTAssertEqual(email.to.count, 2)
         email.addToEmail("tmcintyre@hiimtmac.ca")
-        XCTAssertEqual(email.validTo.count, 2)
+        XCTAssertEqual(email.to.count, 2)
         email.addToEmail("hiimtmac@hiimtmac.ca")
-        XCTAssertEqual(email.validTo.count, 3)
+        XCTAssertEqual(email.to.count, 3)
     }
     
     func testCc() {
-        var email = Email(subject: "Hello", body: "This is an email", to: ["test@hiimtmac.com"])
-        XCTAssertEqual(email.validTo.count, 1)
+        var email = Email(subject: "Hello", body: "This is an email", toAddresses: ["test@hiimtmac.com"])
+        XCTAssertEqual(email.to.count, 1)
         email.addCcEmail("tmcintyre@hiimtmac.ca")
-        XCTAssertEqual(email.validCc.count, 1)
+        XCTAssertEqual(email.cc.count, 1)
         email.addCcEmail("tmcintyre@v")
-        XCTAssertEqual(email.validCc.count, 1)
+        XCTAssertEqual(email.cc.count, 1)
         email.addCcEmail("tmcintyre@hiimtmac.ca")
-        XCTAssertEqual(email.validCc.count, 1)
+        XCTAssertEqual(email.cc.count, 1)
         email.addCcEmail("hiimtmac@hiimtmac.ca")
-        XCTAssertEqual(email.validCc.count, 2)
+        XCTAssertEqual(email.cc.count, 2)
     }
     
     func testBcc() {
-        var email = Email(subject: "Hello", body: "This is an email", to: ["test@hiimtmac.com"])
-        XCTAssertEqual(email.validTo.count, 1)
+        var email = Email(subject: "Hello", body: "This is an email", toAddresses: ["test@hiimtmac.com"])
+        XCTAssertEqual(email.to.count, 1)
         email.addBccEmail("tmcintyre@hiimtmac.ca")
-        XCTAssertEqual(email.validBcc.count, 1)
+        XCTAssertEqual(email.bcc.count, 1)
         email.addBccEmail("tmcintyre@v")
-        XCTAssertEqual(email.validBcc.count, 1)
+        XCTAssertEqual(email.bcc.count, 1)
         email.addBccEmail("tmcintyre@hiimtmac.ca")
-        XCTAssertEqual(email.validBcc.count, 1)
+        XCTAssertEqual(email.bcc.count, 1)
         email.addBccEmail("hiimtmac@hiimtmac.ca")
-        XCTAssertEqual(email.validBcc.count, 2)
+        XCTAssertEqual(email.bcc.count, 2)
     }
     
     func testAttachments() {
@@ -56,7 +56,7 @@ class EmailTests: XCTestCase {
         let a4 = EmailAttachment(name: "hi", fileType: .pdf, data: "hi there".data(using: .utf8)!)
         let a5 = EmailAttachment(name: "great", fileType: .pdf, data: "hello".data(using: .utf8)!)
         
-        var email = Email(subject: "attachments", body: "chaff", attachments: [a1, a2, a3])
+        var email = Email(subject: "attachments", body: "chaff", toAddresses: [], attachments: [a1, a2, a3])
         XCTAssertEqual(email.attachments.count, 2)
         email.addAttachment(a4)
         XCTAssertEqual(email.attachments.count, 3)
@@ -65,10 +65,10 @@ class EmailTests: XCTestCase {
     }
     
     func testWhitespaceEmails() {
-        var email = Email(subject: "attachments", body: "chaff", to: [" t@voltagepower.ca", "taylor@hiimtmac.com", "t@hiitmamc.com ", " cpaces@hiimtmac.com "])
-        XCTAssertEqual(email.validTo.count, 4)
+        var email = Email(subject: "attachments", body: "chaff", toAddresses: [" t@voltagepower.ca", "taylor@hiimtmac.com", "t@hiitmamc.com ", " cpaces@hiimtmac.com "])
+        XCTAssertEqual(email.to.count, 4)
 
         email.addToEmail("   this@hiitmamc.com    ")
-        XCTAssertEqual(email.validTo.count, 5)
+        XCTAssertEqual(email.to.count, 5)
     }
 }
