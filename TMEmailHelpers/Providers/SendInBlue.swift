@@ -63,7 +63,7 @@ public struct SendInBlue: Encodable {
         try container.encode(email.subject, forKey: .subject)
         try container.encode(replyTo, forKey: .replyTo)
         
-        let attachments = email.attachments.map { SIBAttachment(content: .base64($0.data), name: $0.name) }
+        let attachments = email.attachments.map { SIBAttachment(content: .base64($0.data), name: "\($0.name).\($0.fileType.fileExtension)") }
         try container.encode(attachments, forKey: .attachment)
         
         if let headers = headers {

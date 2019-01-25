@@ -42,7 +42,7 @@ class SendInBlueTests: XCTestCase {
         
         let jAttachment = json?["attachment"] as? [[String: String]]
         XCTAssertEqual(jAttachment?.first?["content"], "aGVsbG8=")
-        XCTAssertEqual(jAttachment?.first?["name"], "test")
+        XCTAssertEqual(jAttachment?.first?["name"], "test.pdf")
 
     }
     
