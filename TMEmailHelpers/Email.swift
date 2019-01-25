@@ -10,13 +10,13 @@ import UIKit
 import MessageUI
 
 public struct Email {
-    let subject: String
-    let body: String
-    let isHTML: Bool
-    var to: Set<Contact>
-    var cc: Set<Contact>
-    var bcc: Set<Contact>
-    var attachments: Set<EmailAttachment>
+    public let subject: String
+    public let body: String
+    public let isHTML: Bool
+    public var to: Set<Contact>
+    public var cc: Set<Contact>
+    public var bcc: Set<Contact>
+    public var attachments: Set<EmailAttachment>
     
     public init(subject: String,
                 body: String,
