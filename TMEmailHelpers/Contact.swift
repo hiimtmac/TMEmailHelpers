@@ -14,7 +14,7 @@ public struct Contact: Codable, Hashable {
     public let name: String?
     public let email: EmailAddress
     
-    public init?(optionalEmail email: EmailAddress?, name: String? = nil) {
+    public init?(email: EmailAddress?, name: String? = nil) {
         guard let email = email else { return nil }
         
         let trimmedEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -26,21 +26,6 @@ public struct Contact: Codable, Hashable {
             self.email = email
         } else {
             return nil
-        }
-    }
-    
-    public init(throwingEmail email: EmailAddress?, name: String? = nil) throws {
-        guard let email = email else { throw NSError() }
-        
-        let trimmedEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
-        
-        if emailPredicate.evaluate(with: trimmedEmail) {
-            self.name = name
-            self.email = email
-        } else {
-            throw NSError()
         }
     }
 }

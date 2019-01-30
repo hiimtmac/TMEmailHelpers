@@ -44,26 +44,26 @@ public struct Email {
         self.subject = subject
         self.body = body
         self.isHTML = isHTML
-        self.to = Set(toAddresses.compactMap({ Contact(optionalEmail: $0) }))
-        self.cc = Set(ccAddresses.compactMap({ Contact(optionalEmail: $0) }))
-        self.bcc = Set(bccAddresses.compactMap({ Contact(optionalEmail: $0) }))
+        self.to = Set(toAddresses.compactMap({ Contact(email: $0) }))
+        self.cc = Set(ccAddresses.compactMap({ Contact(email: $0) }))
+        self.bcc = Set(bccAddresses.compactMap({ Contact(email: $0) }))
         self.attachments = Set(attachments)
     }
     
     public mutating func addToEmail(_ address: Contact.EmailAddress?) {
-        if let contact = Contact(optionalEmail: address) {
+        if let contact = Contact(email: address) {
             to.insert(contact)
         }
     }
     
     public mutating func addCcEmail(_ address: Contact.EmailAddress?) {
-        if let contact = Contact(optionalEmail: address) {
+        if let contact = Contact(email: address) {
             cc.insert(contact)
         }
     }
     
     public mutating func addBccEmail(_ address: Contact.EmailAddress?) {
-        if let contact = Contact(optionalEmail: address) {
+        if let contact = Contact(email: address) {
             bcc.insert(contact)
         }
     }

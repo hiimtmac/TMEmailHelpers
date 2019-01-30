@@ -13,7 +13,7 @@ import Requester
 class SendInBlueTests: XCTestCase {
 
     func testBasicEmail() throws {
-        let sender = try Contact(throwingEmail: "taylor@hiimtmac.com")
+        let sender = Contact(email: "taylor@hiimtmac.com")!
         
         let attachments = [EmailAttachment(name: "test", fileType: .pdf, data: "hello".data(using: .utf8)!)]
         
@@ -47,8 +47,8 @@ class SendInBlueTests: XCTestCase {
     }
     
     func testAdvancedEmail() throws {
-        let sender = try Contact(throwingEmail: "taylor@hiimtmac.com")
-        let receiver = try Contact(throwingEmail: "tmac@hiimtmac.com")
+        let sender = Contact(email: "taylor@hiimtmac.com")!
+        let receiver = Contact(email: "tmac@hiimtmac.com")!
         
         let attachments = [
             EmailAttachment(name: "pdf", fileType: .pdf, data: "pdf".data(using: .utf8)!),

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name                    = "TMEmailHelpers"
-    s.version                 = "1.1.3"
+    s.version                 = "1.2.0"
     s.summary                 = "Email creation helpers"
 
     s.homepage                = "http://github.com/hiimtmac/TMEmailHelpers"
