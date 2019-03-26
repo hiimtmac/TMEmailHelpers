@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Requester
 @testable import TMEmailHelpers
 
 class SendInBlueTests: XCTestCase {

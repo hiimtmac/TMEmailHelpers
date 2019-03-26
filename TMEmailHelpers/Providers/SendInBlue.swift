@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Requester
+import SwiftyMimes
 
 public struct SendInBlue: Encodable {
     static let url = URL(string: "https://api.sendinblue.com/v3/smtp/email")!

@@ -1,21 +1,16 @@
 PODS:
-  - Requester (0.0.5):
-    - SwiftyMimes
-  - SwiftyMimes (0.0.4)
+  - SwiftyMimes (0.1.1)
 
 DEPENDENCIES:
-  - Requester
   - SwiftyMimes
 
 SPEC REPOS:
   https://github.com/hiimtmac/specs.git:
-    - Requester
     - SwiftyMimes
 
 SPEC CHECKSUMS:
-  Requester: 6430c038f150aeb2964ad741c447f178f2ad3f8e
-  SwiftyMimes: a0b30c0a26fdf9c310fb4eee60e25b4949b9346b
+  SwiftyMimes: 319f49dd063a7012004987058647dfb25e397850
 
-PODFILE CHECKSUM: d34227f6d9d27d7bf76f26f398cc4f13e1347ac0
+PODFILE CHECKSUM: c6a5642fe42bc3812f2b201978d10da884d2e26d
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

@@ -6,13 +6,11 @@ target 'TMEmailHelpers' do
   use_frameworks!
 
   pod 'SwiftyMimes'
-  pod 'Requester'
 
   target 'TMEmailHelpersTests' do
     inherit! :search_paths
 
     pod 'SwiftyMimes'
-    pod 'Requester'
   end
 
 end
