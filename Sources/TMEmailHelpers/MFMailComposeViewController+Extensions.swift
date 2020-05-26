@@ -11,15 +11,15 @@ import MessageUI
 
 extension MFMailComposeViewController {
     public func setToContacts(_ contacts: Set<Contact>) {
-        setToRecipients(contacts.map { $0.email })
+        setToRecipients(contacts.map(\.email))
     }
     
     public func setCcContacts(_ contacts: Set<Contact>) {
-        setCcRecipients(contacts.map { $0.email })
+        setCcRecipients(contacts.map(\.email))
     }
     
     public func setBccContacts(_ contacts: Set<Contact>) {
-        setBccRecipients(contacts.map { $0.email })
+        setBccRecipients(contacts.map(\.email))
     }
     
     public func setAttachments(_ attachments: Set<EmailAttachment>) {

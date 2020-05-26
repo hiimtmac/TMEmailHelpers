@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyMimes
 
 public struct EmailAttachment: Equatable, Hashable {
     let name: String

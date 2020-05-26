@@ -6,7 +6,7 @@
 //  Copyright © 2018 hiimtmac. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import MessageUI
 
 public protocol EmailPresenting: AnyObject {

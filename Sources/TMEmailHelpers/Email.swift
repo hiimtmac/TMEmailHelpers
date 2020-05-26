@@ -6,8 +6,7 @@
 //  Copyright © 2018 hiimtmac. All rights reserved.
 //
 
-import UIKit
-import MessageUI
+import Foundation
 
 public struct Email {
     public let subject: String
