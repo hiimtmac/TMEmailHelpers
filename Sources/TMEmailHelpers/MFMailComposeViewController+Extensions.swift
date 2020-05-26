@@ -1,11 +1,3 @@
-//
-//  MFMailComposeViewController+Extensions.swift
-//  TMEmailHelpers
-//
-//  Created by Taylor McIntyre on 2019-01-25.
-//  Copyright © 2019 hiimtmac. All rights reserved.
-//
-
 import Foundation
 import MessageUI
 
