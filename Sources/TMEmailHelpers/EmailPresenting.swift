@@ -1,4 +1,3 @@
-import UIKit
 import MessageUI
 
 public protocol EmailPresenting: AnyObject {
