@@ -1,11 +1,3 @@
-//
-//  Contact.swift
-//  TMEmailHelpers
-//
-//  Created by Taylor McIntyre on 2019-01-25.
-//  Copyright © 2019 hiimtmac. All rights reserved.
-//
-
 import Foundation
 
 public struct Contact: Codable, Hashable {
